@@ -1,0 +1,21 @@
+const Discord = require('discord.js')
+const client = new Discord.Client()
+client.on("ready", () => {
+  console.log(`Em funcionamento!!!! total de ${client.channels.size} Canais, em ${client.guilds.size} servers, um total de ${client.users.size} usuarios.`)
+});
+ 
+ 
+client.login("MzU0NjYwMDcxMTA1NjI2MTEy.DJBtTA.TtHPQXiwrL_GrLFPITsJeJ6yR_k");
+ 
+ 
+client.on("message", (message) => {
+  if (message.content.startsWith("Hifumi, Alo")) {
+    message.reply("Ola!");
+  }
+});
+
+client.on("message", (message) => {
+    if (message.content.startsWith("Hifumi, Defina Samuel")) {
+      message.reply("Doente");
+    }
+  });
